@@ -1,0 +1,15 @@
+- name: update apt cache
+  apt: update_cache=yes
+  become: true
+
+- name: Install python
+  apt: name=python state=latest
+  become: true
+
+- name: Install python-pip
+  apt: name=python-pip state=latest
+  become: true
+
+- name: Install flask 
+  pip: name=Flask
+  become: true
